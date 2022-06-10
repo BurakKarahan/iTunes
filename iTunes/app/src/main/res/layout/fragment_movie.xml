@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.movie.MovieFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Film ve Video Ara"
+            android:drawableLeft="@drawable/icon_search"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:drawablePadding="15dp"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_title_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Filmler"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="0dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black"/>
+
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/placeholder_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                app:shimmer_angle="20"
+                app:shimmer_animation_duration="500"
+                app:shimmer_auto_start="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+
+                </LinearLayout>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <TextView
+                android:id="@+id/text_title_short_film"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kısa Filmler"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_shortFilm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black"/>
+
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/placeholder_shortFilm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                app:shimmer_angle="20"
+                app:shimmer_animation_duration="500"
+                app:shimmer_auto_start="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+
+                </LinearLayout>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <TextView
+                android:id="@+id/text_title_tv_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TV Gösterileri"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_tvShow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black"/>
+
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/placeholder_tvShow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                app:shimmer_angle="20"
+                app:shimmer_animation_duration="500"
+                app:shimmer_auto_start="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+                    <include layout="@layout/placeholder_horizontal" />
+
+                </LinearLayout>
+
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"></TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

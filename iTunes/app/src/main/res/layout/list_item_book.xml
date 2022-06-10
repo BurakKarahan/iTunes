@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/black"
+    android:layout_marginTop="5dp"
+    android:id="@+id/linearLayout_book">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        card_view:cardCornerRadius="5dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/image_book_artworkUrl100"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/icon_book_2"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:id="@+id/text_book_artistName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="left"
+                android:minLines="1"
+                android:maxLines="1"
+                android:textColor="@color/testGray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/icon_pencil"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="6dp" />
+
+            <TextView
+                android:id="@+id/text_book_trackName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textSize="12sp"
+                android:gravity="left"
+                android:minLines="1"
+                android:maxLines="1"
+                android:textColor="@color/testGray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/icon_type"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="6dp" />
+
+            <TextView
+                android:id="@+id/text_book_genres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textSize="12sp"
+                android:gravity="left"
+                android:textColor="@color/testGray"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/text_book_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="2dp"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/testGray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
